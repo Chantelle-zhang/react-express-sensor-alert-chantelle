@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import styles from './Monitor.module.scss';
-import { fetchData, setAlert } from '../store/ActionCreators/actions';
+import styles from './Monitor.scss';
+import { fetchData } from '../store/ActionCreators/actions';
 
 
 const Monitor = () => {
@@ -10,31 +10,31 @@ const Monitor = () => {
   const isLoading = useSelector((state) => state.isLoading);
 
   const setMonitor = async () => {
-    await dispatch(fetchData('http://localhost:5000/api/monitor/'));
-    dispatch(setAlert(beerData));
+    await dispatch(fetchData('api/monitor'));
   };
 
   useEffect(() => {
-    setMonitor()
+    setMonitor();
   }, [dispatch]);
 
 
   return (isLoading === true ? <img src="../image/spinner.gif" alt="loading" />
       : <div>
-        <div className="row">
           {beerData.map((beer) => (
-            <div>
+            <div key={beer.id}>
               <button
-                key={beer.id}
                 className={beer.isSafe ? styles.safe : styles.warning}
               >
+                {`${beer.name}  `}
                 Current Temperature:
-                {beer.currentTemp}
+                {` ${beer.currentTemp} `}
+                Safe Range:
+                {` ${beer.minStoreTemp}-${beer.maxStoreTemp}`}
               </button>
             </div>
           ))}
         </div>
-        </div>
+
   );
 };
 
