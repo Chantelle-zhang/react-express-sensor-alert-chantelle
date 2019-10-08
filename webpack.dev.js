@@ -9,7 +9,12 @@ const devConfig = {
         contentBase: './dist',
         open: true,
         port: 3000,
-        hot: true
+        hot: true,
+        proxy: {
+            '/api/monitor': {
+                target: 'http://localhost:5000'
+            }
+        },
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin()
