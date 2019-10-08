@@ -19,6 +19,7 @@ router.get('/', async (req, res) => {
             const currentTempData=[...response].map((item)=>item.data);
             newBeerData.map((beer) => {
                 beer.currentTemp = currentTempData.find((item)=>item.id===beer.id).temperature
+                beer.isSafe = (beer.currentTemp >= beer.minStoreTemp && beer.currentTemp <= beer.maxStoreTemp)
             })
         });
         res.json(newBeerData)
