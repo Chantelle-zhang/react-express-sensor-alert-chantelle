@@ -6,13 +6,14 @@ const devConfig = {
     mode: 'development',
     devtool: 'cheap-module-eval-source-map',
     devServer: {
-        contentBase: './dist',
+        contentBase: './src',
         open: true,
         port: 3000,
         hot: true,
         proxy: {
             '/api/monitor': {
-                target: 'http://localhost:5000'
+                target: 'http://localhost:5000',
+                changeOrigin:true
             }
         },
     },
