@@ -6,6 +6,7 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import Monitor from './component/Monitor';
 import Alert from './component/Alert';
 import { beerData, isLoading, unSafeBeers } from './store/reducer';
+import './App.scss'
 
 const middleware = [thunk];
 
@@ -22,7 +23,7 @@ const store = createStore(
 
 const App = () => (
   <Provider store={store}>
-    <div>
+    <div className="container">
       <Alert />
       <Monitor />
     </div>

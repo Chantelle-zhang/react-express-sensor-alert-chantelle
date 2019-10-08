@@ -18,7 +18,7 @@ router.get('/', async (req, res) => {
         })).then((response) => {
             const currentTempData=[...response].map((item)=>item.data);
             newBeerData.map((beer) => {
-                beer.currentTemp = currentTempData.find((item)=>item.id===beer.id).temperature
+                beer.currentTemp = currentTempData.find((item)=>item.id===beer.id).temperature;
                 beer.isSafe = (beer.currentTemp >= beer.minStoreTemp && beer.currentTemp <= beer.maxStoreTemp)
             })
         });
