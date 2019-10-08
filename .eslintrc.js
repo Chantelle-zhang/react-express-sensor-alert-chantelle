@@ -32,7 +32,13 @@ module.exports = {
     " react/jsx-tag-spacing":0,
     " react/jsx-wrap-multilines":0,
     "semi":0,
-    "no-console":0
+    "no-console":0,
+    "import/prefer-default-export":0,
+    "no-multiple-empty-lines":0,
+    "indent":0,
+    "react/jsx-wrap-multilines":0,
+    "react/jsx-indent":0,
+    "implicit-arrow-linebreak":0
 
 
 
