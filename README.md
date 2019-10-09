@@ -1,6 +1,6 @@
 # react-express-sensor-alert-chantelle
-     npm run server: to start the application
-     npm run dev: to run the application dev enviroment
+     npm run server: to start the application on localhost:5000
+     npm run dev: to run the application dev enviroment on localhost:3000
      npm run build: to build the application
      npm run test to test the application
      
