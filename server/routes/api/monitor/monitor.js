@@ -1,4 +1,3 @@
-const axios = require('axios/index');
 const express = require('express');
 const router = express.Router();
 const { getTemperatureData, transformBeerData }=require('../../../service/beerService')
