@@ -1,6 +1,6 @@
 const express = require('express')
 
-const monitorRouter = require('./routes/api/monitor')
+const monitorRouter = require('./routes/api/monitor/monitor')
 
 const app = express()
 

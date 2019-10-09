@@ -3,8 +3,8 @@ import { createStore, applyMiddleware, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
-import Monitor from './component/Monitor';
-import Alert from './component/Alert';
+import Monitor from './component/Monitor/Monitor';
+import Alert from './component/Alert/Alert';
 import { beerData, isLoading, unSafeBeers } from './store/reducer';
 import './App.scss'
 

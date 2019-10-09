@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import './Monitor.scss';
-import { fetchData } from '../store/ActionCreators/actions';
+import { fetchData } from '../../store/ActionCreators/actions';
 
 
 const Monitor = () => {

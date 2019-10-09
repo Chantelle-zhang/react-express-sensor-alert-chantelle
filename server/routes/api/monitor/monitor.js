@@ -1,4 +1,4 @@
-const axios = require('axios');
+const axios = require('axios/index');
 const express = require('express');
 const router = express.Router();
 const BeerData = [
