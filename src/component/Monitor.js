@@ -26,13 +26,7 @@ const Monitor = () => {
               <button
                 className={beer.isSafe ? 'safe' : 'warning'}
               >
-                #
-                {beer.id}
-                {` ${beer.name}  `}
-                Current Temperature:
-                {` ${beer.currentTemp} `}
-                Safe Range:
-                {` ${beer.minStoreTemp}-${beer.maxStoreTemp}`}
+                { `#${beer.id} ${beer.name} | Current Temperature: ${beer.currentTemp} | Safe Range: ${beer.minStoreTemp}-${beer.maxStoreTemp}`}
               </button>
             </div>
           ))}

@@ -7,6 +7,7 @@ const Alert = () => {
   return (
     <div>
       <div className="row">
+        <h1>Warning!</h1>
         {unSafeBeers.length > 0 && unSafeBeers.map((beer) =>
           <div key={beer.id}>
             <p className="alert">
