@@ -8,4 +8,8 @@
 1. Back End:There is api (api/monitor) which return the beers list 
 1. Front End:There is a beers list component and alert component showing the unsafe beers list.
 
+#next generation will improve:
+1. better config webpack to help performance
+2. Improve the first loading performance
+3. Front end design and styling 
 
