@@ -8,7 +8,8 @@ const BeerData = [
     {id: '4', name: 'Stout', minStoreTemp: '6', maxStoreTemp: '8', currentTemp: null},
     {id: '5', name: 'Pale Ale', minStoreTemp: '4', maxStoreTemp: '6', currentTemp: null}
 ];
-
+ /* the api wrap the result of 5 api call with different id  to a complete list*/
+ /* then transform the data and add new property 'isSafe' to beer object */
 router.get('/', async (req, res) => {
     try {
         const newBeerData=[...BeerData];
