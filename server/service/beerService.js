@@ -40,7 +40,7 @@ const BeerData = [
 ];
 
 
-export const getTemperatureData = () => {
+ const getTemperatureData = () => {
 
   const response = Promise.all([...BeerData].map((beer) => {
     const url = `https://temperature-sensor-service.herokuapp.com/sensor/${beer.id}`;
@@ -49,7 +49,7 @@ export const getTemperatureData = () => {
   return response;
 };
 
-export const transformBeerData = (rowData) => {
+ const transformBeerData = (rowData) => {
   const newBeerData = [...BeerData];
   const currentTempData = [...rowData].map((item) => item.data);
   newBeerData.map((beer) => {
@@ -59,3 +59,8 @@ export const transformBeerData = (rowData) => {
   return newBeerData;
 
 };
+
+module.exports={
+  getTemperatureData,
+  transformBeerData,
+}
